@@ -1,0 +1,8 @@
+package com.reputation.trailing.models;
+
+public class NetAssetValue {
+	
+	private String recordedDate;
+	private long navValue;
+
+}

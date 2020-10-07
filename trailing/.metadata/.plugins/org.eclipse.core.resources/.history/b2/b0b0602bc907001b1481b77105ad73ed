@@ -1,0 +1,13 @@
+package com.reputation.trailing;
+
+import org.junit.Before;
+
+public class NetAssetValueTestController extends AbstractTestTemplate {
+
+	@Override
+	@Before
+	public void setUp() {
+		super.setUp();
+	}
+
+}

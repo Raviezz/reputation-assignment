@@ -1,0 +1,15 @@
+package com.reputation.trailing.models;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Trailing {
+	
+	@JsonProperty("scheme_no")
+	private String schemeNumber;
+	
+	@JsonProperty("investment_period")
+	private int investmentPeriod;
+	private int horizon; 
+	
+
+}

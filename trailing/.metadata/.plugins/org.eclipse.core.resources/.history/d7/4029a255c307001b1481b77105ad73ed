@@ -1,0 +1,5 @@
+package com.reputation.trailing.validators;
+
+public class CustomizedResponseEntityExceptionHandler {
+
+}

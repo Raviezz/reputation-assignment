@@ -1,0 +1,24 @@
+package com.reputation.trailing.models;
+
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Trailing implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4179024953852106173L;
+
+	@JsonProperty("scheme_no")
+	private String schemeNumber;
+	
+	@JsonProperty("investment_period")
+	private int investmentPeriod;
+	
+	@JsonProperty("horizon")
+	private int horizon; 
+	
+
+}

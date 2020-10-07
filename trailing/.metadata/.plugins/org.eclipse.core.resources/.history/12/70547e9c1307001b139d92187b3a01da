@@ -1,0 +1,33 @@
+package com.reputation.trailing.models;
+
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class NetAssetValue implements Serializable{
+	
+
+	
+	@JsonProperty("date")
+	private String recordedDate;
+	
+	@JsonProperty("nav")
+	private long navValue;
+
+	public String getRecordedDate() {
+		return recordedDate;
+	}
+
+	public void setRecordedDate(String recordedDate) {
+		this.recordedDate = recordedDate;
+	}
+
+	public long getNavValue() {
+		return navValue;
+	}
+
+	public void setNavValue(long navValue) {
+		this.navValue = navValue;
+	}
+
+}

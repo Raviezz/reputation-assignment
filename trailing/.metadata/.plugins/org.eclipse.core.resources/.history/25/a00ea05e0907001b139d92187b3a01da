@@ -1,0 +1,10 @@
+package com.reputation.trailing.models;
+
+import java.io.Serializable;
+
+public class NetAssetValue implements Serializable{
+	
+	private String recordedDate;
+	private long navValue;
+
+}

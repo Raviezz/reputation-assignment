@@ -1,0 +1,8 @@
+package com.reputation.trailing.models;
+
+public class Trailing {
+	
+	
+	public String schemeNumber;
+
+}

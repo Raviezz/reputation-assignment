@@ -1,0 +1,54 @@
+package com.reputation.trailing.models;
+
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
+@JsonPropertyOrder({ "scheme_no", "investment_period", "horizon" })
+public class Trailing implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4179024953852106173L;
+
+	@JsonProperty("scheme_no")
+	private String schemeNumber;
+
+	@JsonProperty("investment_period")
+	private int investmentPeriod;
+
+	@JsonProperty("horizon")
+	private int horizon;
+
+	
+	@JsonProperty("scheme_no")
+	public String getSchemeNumber() {
+		return schemeNumber;
+	}
+
+	@JsonProperty("scheme_no")
+	public void setSchemeNumber(String schemeNumber) {
+		this.schemeNumber = schemeNumber;
+	}
+
+	public int getInvestmentPeriod() {
+		return investmentPeriod;
+	}
+
+	public void setInvestmentPeriod(int investmentPeriod) {
+		this.investmentPeriod = investmentPeriod;
+	}
+
+	public int getHorizon() {
+		return horizon;
+	}
+
+	public void setHorizon(int horizon) {
+		this.horizon = horizon;
+	}
+
+}

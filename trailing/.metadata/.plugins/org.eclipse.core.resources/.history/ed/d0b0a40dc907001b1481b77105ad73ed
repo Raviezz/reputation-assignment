@@ -1,0 +1,6 @@
+package com.reputation.trailing;
+
+
+public class NetAssetValueTestController extends AbstractTestTemplate{
+
+}

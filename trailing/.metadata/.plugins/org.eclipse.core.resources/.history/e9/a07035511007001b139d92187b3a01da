@@ -1,0 +1,15 @@
+package com.reputation.trailing;
+
+public class TrailingException extends Exception {
+	private String errorCode;
+
+	public TrailingException(String errMsg) {
+		super(errMsg);
+	}
+
+	public TrailingException(String errCode, String errMsg) {
+		super("[" + errCode + "]" + errMsg);
+		this.errorCode = errCode;
+	}
+
+}

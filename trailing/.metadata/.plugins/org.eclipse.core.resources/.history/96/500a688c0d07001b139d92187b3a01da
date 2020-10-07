@@ -1,0 +1,6 @@
+package com.reputation.trailing.validators;
+
+public interface IRequestValidator<T> {
+	
+	T validateReqParam(String reqData);
+}

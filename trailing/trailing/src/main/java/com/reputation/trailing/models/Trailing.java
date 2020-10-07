@@ -1,0 +1,76 @@
+package com.reputation.trailing.models;
+
+import java.io.Serializable;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
+@JsonPropertyOrder({ "scheme_no", "investment_period", "horizon" })
+public class Trailing implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4179024953852106173L;
+
+	@JsonProperty("scheme_no")
+	@NotNull(message = "Scheme number cannot be null")
+	@Length(min = 6, max = 6)
+	private String schemeNumber;
+
+	@JsonProperty("investment_period")
+	@Min(value = 1, message = "investment period can not less than 1")
+    @Max(value = 10, message = "investment period can not greater than 10")
+	private int investmentPeriod;
+
+	@JsonProperty("horizon")
+	@Min(value = 1, message = "horizon can not less than 1")
+    @Max(value = 10, message = "horizon can not greater than 10")
+	private int horizon;
+
+	
+	@JsonProperty("scheme_no")
+	public String getSchemeNumber() {
+		return schemeNumber;
+	}
+
+	@JsonProperty("scheme_no")
+	public void setSchemeNumber(String schemeNumber) {
+		this.schemeNumber = schemeNumber;
+	}
+
+	@JsonProperty("investment_period")
+	public int getInvestmentPeriod() {
+		return investmentPeriod;
+	}
+
+	@JsonProperty("investment_period")
+	public void setInvestmentPeriod(int investmentPeriod) {
+		this.investmentPeriod = investmentPeriod;
+	}
+
+	@JsonProperty("horizon")
+	public int getHorizon() {
+		return horizon;
+	}
+
+	@JsonProperty("horizon")
+	public void setHorizon(int horizon) {
+		this.horizon = horizon;
+	}
+
+	@Override
+	public String toString() {
+		return "Trailing [schemeNumber=" + schemeNumber + ", investmentPeriod=" + investmentPeriod + ", horizon="
+				+ horizon + "]";
+	}
+
+}

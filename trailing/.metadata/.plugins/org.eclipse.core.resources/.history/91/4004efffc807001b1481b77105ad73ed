@@ -1,0 +1,8 @@
+package com.reputation.trailing;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+public class NetAssetValueTestController {
+
+}

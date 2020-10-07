@@ -1,0 +1,32 @@
+package com.reputation.trailing;
+
+import org.junit.Before;
+
+import com.reputation.trailing.models.Trailing;
+
+public class NetAssetValueTestController extends AbstractTestTemplate {
+
+	@Override
+	@Before
+	public void setUp() {
+		super.setUp();
+	}
+	
+	 @Test
+	   public void createProduct() throws Exception {
+	      String uri = "/products";
+	      Trailing trail = new Trailing();
+	      product.setId("3");
+	      product.setName("Ginger");
+	      String inputJson = super.mapToJson(product);
+	      MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri)
+	         .contentType(MediaType.APPLICATION_JSON_VALUE)
+	         .content(inputJson)).andReturn();
+	      
+	      int status = mvcResult.getResponse().getStatus();
+	      assertEquals(201, status);
+	      String content = mvcResult.getResponse().getContentAsString();
+	      assertEquals(content, "Product is created successfully");
+	   }
+
+}

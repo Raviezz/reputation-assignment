@@ -1,0 +1,11 @@
+package com.reputation.trailing.models;
+
+public class Trailing {
+	
+	
+	private String schemeNumber;
+	private int investmentPeriod;
+	private int horizon; 
+	
+
+}

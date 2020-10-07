@@ -1,0 +1,19 @@
+package com.reputation.trailing;
+
+import org.junit.Before;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+class TrailingApplicationTests extends AbstractTestTemplate {
+
+	@Override
+	@Before
+	public void setUp() {
+		super.setUp();
+	}
+
+	@Test
+	void contextLoads() {
+	}
+
+}

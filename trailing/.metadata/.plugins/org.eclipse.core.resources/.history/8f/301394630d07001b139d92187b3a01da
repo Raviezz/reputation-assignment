@@ -1,0 +1,5 @@
+package com.reputation.trailing;
+
+public class TrailingException extends Exception{
+
+}

@@ -1,0 +1,7 @@
+package com.reputation.trailing.models;
+
+import java.util.List;
+
+public class ApiResponseList {
+	private List<NetAssetValue> listOfNAV;
+}

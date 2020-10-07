@@ -1,0 +1,23 @@
+package com.reputation.trailing.models;
+
+import java.io.Serializable;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ApiResponseList  implements Serializable{
+	
+	@JsonProperty("meta")
+	private String meteData;
+	
+	@JsonProperty("data")
+	private List<NetAssetValue> listOfNAV;
+
+	public List<NetAssetValue> getListOfNAV() {
+		return listOfNAV;
+	}
+
+	public void setListOfNAV(List<NetAssetValue> listOfNAV) {
+		this.listOfNAV = listOfNAV;
+	}
+}

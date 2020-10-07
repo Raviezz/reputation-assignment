@@ -1,0 +1,36 @@
+package com.reputation.trailing;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import com.reputation.trailing.models.Trailing;
+
+public class NetAssetValueTestController extends AbstractTestTemplate {
+
+	@Override
+	@Before
+	public void setUp() {
+		super.setUp();
+	}
+	
+	 @Test
+	   public void createProduct() throws Exception {
+	      String uri = "/products";
+	      Trailing trail = new Trailing();
+	     
+	      String inputJson = super.mapToJson(trail);
+	      MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri)
+	         .contentType(MediaType.APPLICATION_JSON_VALUE)
+	         .content(inputJson)).andReturn();
+	      
+	      int status = mvcResult.getResponse().getStatus();
+	      assertEquals(201, status);
+	      String content = mvcResult.getResponse().getContentAsString();
+	      assertEquals(content, "Product is created successfully");
+	   }
+
+}

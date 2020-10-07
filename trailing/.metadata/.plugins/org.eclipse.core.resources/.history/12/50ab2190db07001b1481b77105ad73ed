@@ -1,0 +1,8 @@
+package com.reputation.trailing.models;
+
+public final class NAVConstants {
+	
+	 public static final String DATA_NODE = "data";
+	 public static final String MONTH = "month";
+
+}
