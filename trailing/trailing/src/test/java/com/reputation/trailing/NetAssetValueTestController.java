@@ -29,7 +29,7 @@ public class NetAssetValueTestController extends AbstractTestTemplate {
 		
 		String inputJson = super.mapToJson(trail);
 		MvcResult mvcResult =
-		 mvc.perform(post("/m/v1/feed/webinar/create").contentType(MediaType.APPLICATION_JSON)
+		 mvc.perform(post(uri).contentType(MediaType.APPLICATION_JSON)
 		            .content(inputJson)).andExpect(status().isOk()).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
